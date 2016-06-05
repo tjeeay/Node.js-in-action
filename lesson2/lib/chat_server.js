@@ -15,7 +15,7 @@ exports.listen = function (server) {
         // 在用户连接上来时把他放入聊天室 Lobby 里
         joinRoom(socket, 'Lobby');
         // 处理用户的消息，更名，以及聊天室的创建和变更
-        handleMessageBroadcasting(socket, nickNames);
+        handleMessageBroadcasting(socket);
         handleNameChangeAttempts(socket, nickNames, namesUsed);
         handleRoomJoining(socket);
 
@@ -70,13 +70,14 @@ function joinRoom(socket, room) {
     var usersInRoom = io.sockets.adapter.rooms[room];
     if (usersInRoom.length > 1) {
         var usersInRoomSummary = 'Users currently in ' + room + ': ';
-        for (var index in usersInRoom) {
-            var userSocketId = usersInRoom[index].id;
+        var index = 0;
+        for (var userSocketId in usersInRoom.sockets) {
             if (userSocketId != socket.id) {
                 if (index > 0) {
                     usersInRoomSummary += ', ';
                 }
                 usersInRoomSummary += nickNames[userSocketId];
+                index++;
             }
         }
         usersInRoomSummary += '.';
@@ -121,7 +122,7 @@ function handleMessageBroadcasting(socket) {
     socket.on('message', function (message) {
         socket.broadcast.to(message.room).emit('message', {
             text: nickNames[socket.id] + ': ' + message.text
-        })
+        });
     });
 }
 

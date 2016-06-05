@@ -23,10 +23,11 @@ function processUserInput(chatApp, socket) {
 }
 
 var socket = io.connect();
+
 $(document).ready(function () {
-
+    
     var chatApp = new Chat(socket);
-
+    
     socket.on('nameResult', function (result) {
         var message;
         if (result.success) {
@@ -43,7 +44,7 @@ $(document).ready(function () {
     });
 
     socket.on('message', function (message) {
-        var newElement = $('<div>').text(message.Text);
+        var newElement = $('<div>').text(message.text);
         $('#messages').append(newElement);
     });
 
