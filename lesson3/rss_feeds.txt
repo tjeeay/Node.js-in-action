@@ -1,0 +1,3 @@
+http://www.asp.net/rss/spotlight
+http://www.asp.net/rss/content
+http://weblogs.asp.net/feed/recent-posts.xml
