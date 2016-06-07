@@ -5,7 +5,7 @@
             "name": "启动",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/lesson3/net.demo.js",
+            "program": "${workspaceRoot}/lesson4/crud.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
