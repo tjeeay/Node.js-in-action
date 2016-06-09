@@ -1,5 +1,5 @@
 {
-  "name": "lesson4",
+  "name": "lesson5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "formidable": "^1.0.17"
-  }
+  "license": "ISC"
 }
