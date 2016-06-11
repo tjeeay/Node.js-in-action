@@ -5,7 +5,7 @@
             "name": "启动",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/lesson4/todo4cli.js",
+            "program": "${workspaceRoot}/lesson5/timetrack_server.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
