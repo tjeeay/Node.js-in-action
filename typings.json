@@ -2,5 +2,8 @@
   "globalDependencies": {
     "mysql": "registry:dt/mysql#0.0.0+20160316155526",
     "node": "registry:dt/node#6.0.0+20160602155235"
+  },
+  "dependencies": {
+    "redis": "registry:npm/redis#0.12.1+20160502170935"
   }
 }

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mysql": "^2.11.1"
+    "mysql": "^2.11.1",
+    "redis": "^2.6.1"
   }
 }
