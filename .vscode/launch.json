@@ -5,7 +5,7 @@
             "name": "启动",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/lesson5/timetrack_server.js",
+            "program": "${workspaceRoot}/lesson6/connect_multiErrorHandler_demo.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
