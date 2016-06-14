@@ -63,7 +63,7 @@
   * 处理Web程序安全的中间件
   * 提供静态文件服务的中间件
 
-* 自带中间件汇总
+* 自带中间件汇总 [Reference](https://github.com/senchalabs/connect#middleware)
   * `cookieParser()` 为后续中间件提供 `req.cookies` 和 `req.signedCookies`
   * `bodyParser()` 为后续中间件提供 `req.body` 和 `req.files`
   * `limit()` 基于给定字节长度限制请求主体的大小。必须用在bodyParser中间件之前
@@ -79,3 +79,12 @@
   * `static()` 把指定目录中的文件发给HTTP客户端。跟Connect的挂载功能配合得很好
   * `compress()` 用gzip压缩优化HTTP响应
   * `directory()` 为HTTP客户端提供目录清单服务，基于客户端的Accept请求头（普通文本， JSON或HTML）提供经过优化的结果
+
+
+## 第8章 Express
+
+* 本章内容
+  * 开始一个新的 Express 程序
+  * 配置你的程序
+  * 创建 Express 视图
+  * 处理文件上传和下载
