@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- 引入 menu.ejs 模板 -->
+    <% include ../menu %>
+
+    <h1><%= title %></h1>
+    <p>Fill in the form below to sign up!</p>
+
+    <% include ../messages %>
+
+    <form method='POST'>
+        <p>
+            <input type='text' name='user[name]' required placeholder='User name' />
+        </p>
+        <p>
+            <input type='password' name='user[pass]' required placeholder='Password' />
+        </p>
+        <p>
+            <input type='submit' value='Sign Up' />
+        </p>
+    </form>
+
+  </body>
+</html>
