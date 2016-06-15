@@ -1,0 +1,11 @@
+
+<div id='menu'>
+    <% if (locals.user) { %>
+        <span class='name'><%=user.name %></span>
+        <a href='/entries/post'>post</a>
+        <a href='/users/logout'>logout</a>
+    <% } else { %>
+        <a href='/users/login'>login</a>
+        <a href='/users/register'>register</a>
+    <% } %>
+</div>

@@ -1,5 +1,6 @@
 {
   "globalDependencies": {
+    "bcrypt": "registry:dt/bcrypt#0.0.0+20160316155526",
     "connect": "registry:dt/connect#3.4.0+20160317120654",
     "mysql": "registry:dt/mysql#0.0.0+20160316155526",
     "node": "registry:dt/node#6.0.0+20160602155235"
