@@ -88,3 +88,32 @@
   * 配置你的程序
   * 创建 Express 视图
   * 处理文件上传和下载
+
+
+## 第9章 Express 进阶
+
+* 本章内容
+  * 实现认证
+	* URL 路由
+	* 创建 REST API
+	* 处理错误
+
+
+## 第10章 测试 Node 程序
+
+* 本章内容
+  * 用 Node 的 assert 模块测试逻辑
+  * 使用 Node 单元测试框架
+  * 用 Node 模拟和控制浏览器
+
+* `assert`
+  * **ok(value, [message])** - Tests if value is a true value.
+  * **equal(actual, expected, [message])** - Tests shallow, coercive equality with the equal comparison operator ( == ).
+  * **notEqual(actual, expected, [message])** - Tests shallow, coercive non-equality with the not equal comparison operator ( != ).
+  * **deepEqual(actual, expected, [message])** - Tests for deep equality.
+  * **notDeepEqual(actual, expected, [message])** - Tests for any deep inequality.
+  * **strictEqual(actual, expected, [message])** - Tests strict equality, as determined by the strict equality operator ( === )
+  * **notStrictEqual(actual, expected, [message])** - Tests strict non-equality, as determined by the strict not equal operator ( !== )
+  * **throws(block, [error], [message])** - Expects block to throw an error.
+  * **doesNotThrow(block, [error], [message])** - Expects block not to throw an error.
+  * **ifError(value)** - Tests if value is not a false value, throws if it is a true value. Useful when testing the first argument, error in callbacks.
