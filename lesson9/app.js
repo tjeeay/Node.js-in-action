@@ -11,6 +11,9 @@ var messages = require('./lib/messages');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var entries = require('./routes/entries');
+var api = require('./routes/api');
+
+var errorHandlers = require('./routes/errorHandlers');
 
 var app = express();
 
@@ -29,47 +32,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var hour = 3600000; // ms
 var sessionOptions = {
-    secret: 'my sid',
-    cookie: { maxAge: hour * 24 , secure: false }, // secure=true 仅支持 https 请求
-    //store: new RedisStore({ prefix: 'sid' })
+  secret: 'my sid',
+  cookie: { maxAge: hour * 24, secure: false }, // secure=true 仅支持 https 请求
+  //store: new RedisStore({ prefix: 'sid' })
 }
 app.use(session(sessionOptions));
 // 消息处理中中间件（应该把这个中间件放在中间件 session 下面，因为它依赖于 req.session ）
 app.use(messages());
 
 app.use('/', entries);
+app.use('/api', api);
 app.use('/users', users);
-
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
 
 // error handlers
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+// catch 404 and forward to error handler
+app.use(errorHandlers.notFound(app));
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
+// catch error
+app.use(errorHandlers.error(app));
+
 
 module.exports = app;

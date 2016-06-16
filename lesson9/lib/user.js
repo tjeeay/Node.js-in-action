@@ -60,6 +60,14 @@ User.prototype.hashPassword = function (fn) {
     });
 }
 
+User.prototype.toJSON = function () {
+    return {
+        id: this.id,
+        name: this.name,
+        age: this.age
+    };
+}
+
 User.getByName = function (name, fn) {
     User.getId(name, function (err, id) {
         if (err) {
@@ -100,7 +108,7 @@ User.authenticate = function (name, pass, fn) {
             }
             fn();
         });
-    })
+    });
 }
 
 module.exports = User;

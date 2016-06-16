@@ -5,4 +5,5 @@
 /// <reference path="globals/mysql/index.d.ts" />
 /// <reference path="globals/node/index.d.ts" />
 /// <reference path="globals/serve-static/index.d.ts" />
+/// <reference path="modules/basic-auth-connect/index.d.ts" />
 /// <reference path="modules/redis/index.d.ts" />

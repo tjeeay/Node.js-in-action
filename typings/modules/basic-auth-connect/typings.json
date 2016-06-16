@@ -1,0 +1,11 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/typed-typings/npm-basic-auth-connect/42bcc7273c013e68d9b01985001ca417da031457/typings.json",
+    "raw": "registry:npm/basic-auth-connect#1.0.0+20160226233223",
+    "main": "index.d.ts",
+    "global": false,
+    "name": "basic-auth-connect",
+    "type": "typings"
+  }
+}

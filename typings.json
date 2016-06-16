@@ -6,6 +6,7 @@
     "node": "registry:dt/node#6.0.0+20160602155235"
   },
   "dependencies": {
+    "basic-auth-connect": "registry:npm/basic-auth-connect#1.0.0+20160226233223",
     "redis": "registry:npm/redis#0.12.1+20160502170935"
   }
 }

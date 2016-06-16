@@ -30,4 +30,10 @@ Entry.getRange = function (from, to, fn) {
     });
 }
 
+Entry.count = function (fn) {
+    db.llen('entries', function (err, total) {
+        fn(err, total);
+    });
+}
+
 module.exports = Entry;
